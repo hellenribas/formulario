@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import MyContext from "../context/MyContext";
 
 function Preview(){
+  const contexto = useContext(MyContext)
 return(
+  <>
   <p>
-    teste
+  {contexto.nome}
   </p>
+  <p>
+  {contexto.sobrenome}
+  </p>
+  
+  <p>
+  {contexto.email}
+  </p>
+  </>
 )
 
 }

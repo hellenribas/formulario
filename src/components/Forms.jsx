@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import MyContext from "../context/MyContext";
 
 function Forms(){
@@ -24,7 +24,7 @@ return (
       <input type='text' name="email" value={contexto.email}
        onChange={(event) => contexto.handleEmail(event)}/>
     </label>
-    <button onClick={ () => {}}>
+    <button type="button" onClick={contexto.handleClick}>
       Cadastrar
     </button>
   </form>

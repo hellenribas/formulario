@@ -5,6 +5,7 @@ function MyProvider(props) {
   const [nome, setNome] =  useState('')
   const [sobrenome, setSobrenome] =  useState('')
   const [email, setEmail] =  useState('')
+  const [visualizar, setVisualizar] = useState(false)
 
   function handleNome(event) {
     setNome(event.target.value)
@@ -17,7 +18,12 @@ function MyProvider(props) {
   function handleEmail(event) {
     setEmail(event.target.value)
   }
-  const context = {nome, sobrenome, email, handleNome, handleSobrenome, handleEmail}
+
+  function handleClick() {
+  setVisualizar(true)
+  }
+
+  const context = {nome, sobrenome, email, handleNome, handleSobrenome, handleEmail, visualizar, handleClick}
   return(
     <MyContext.Provider value={context}>
       {props.children}
